@@ -1,21 +1,33 @@
 export type Rendered = {
-  /**
-   * The root element of the component
-   */
   element: HTMLElement
 }
 
-/**
- * Options for the creation of MyComponent
- */
- export type MyComponentOptions = {
-  initialText: string
+export enum LabelPosition {
+  ABOVE = 'above',
+  LEFT = 'left'
 }
 
-export type MyComponent = {
-  rendered: Rendered
-  /**
-   * Updates the text that is shown within the component
-   */
-  updateText: (newText: string) => string
+export type NumberInputOptions = {
+  initialValue: number
+  label?: string
+  labelPosition?: LabelPosition
+  onlyInteger?: boolean
+  min?: number
+  max?: number
+  step?: number
+  showDirtinessIndicator?: boolean
+  events?: {
+    onInput?: (newValue: number) => void
+    onChange?: (value: number) => void
+  }
+}
+
+export type NumberInput = {
+  rendered: Rendered & { input: HTMLInputElement }
+  value: number
+  isDirty: boolean
+  resetDirtiness: () => void
+  setValue: (newValue: number) => void
+  updateMin: (newMin: number) => void
+  updateMax: (newMax: number) => void
 }

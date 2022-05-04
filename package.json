@@ -1,7 +1,7 @@
 {
-  "name": "my-component",
+  "name": "@samhuk/number-input",
   "version": "1.0.0",
-  "description": "my-component description",
+  "description": "Vanilla JS number input UI component",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "files": [
@@ -23,9 +23,7 @@
   },
   "author": "",
   "license": "MIT",
-  "dependencies": {
-    "drag-resistant-click-listener": "^1.0.1"
-  },
+  "dependencies": { },
   "devDependencies": {
     "esbuild-plugin-sass": "^1.0.1",
     "esbuild-sass-plugin": "^2.2.3",

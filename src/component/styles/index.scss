@@ -1,8 +1,75 @@
-// This is the entrypoint scss file for styling the component.
+$link-color: #1F8ACC;
+$border-color: #ccc;
+$border: 1px solid $border-color;
+$border-darker-1: 1px solid darken($border-color, 20);
+$border-radius: 5px;
 
-.com-my-component {
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  background-color: #eee;
-  padding: 5px;
+.box {
+  border: $border;
+  border-radius: $border-radius;
+  padding: 10px;
+}
+
+.com-number-input {
+  position: relative;
+
+  &.uneditable {
+    cursor: pointer;
+  }
+
+  .com-number-input__label-wrapper {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+
+    label {
+      color: #555;
+      font-size: 14px;
+    }
+
+    .com-number-input__dirty-indicator {
+      margin-left: 10px;
+      margin-top: -3px;
+      font-size: 12px;
+      display: none;
+    }
+  }
+
+  &.dirty {
+    .com-number-input__dirty-indicator {
+      display: initial;
+    }
+  }
+
+  input {
+    @extend .box;
+    width: 100%;
+    padding: 6px;
+    margin-top: 5px;
+    box-sizing: border-box;
+
+    &:focus-visible {
+      box-shadow: none !important;
+      border: 1px solid $link-color;
+    }
+  }
+
+  &.left-label-position {
+    display: flex;
+    align-items: center;
+
+    label {
+      flex-shrink: 0;
+      margin-right: 10px;
+    }
+
+    .com-number-input__dirty-indicator {
+      margin-left: 0;
+      margin-right: 5px;
+    }
+
+    input {
+      margin-top: 0;
+    }
+  }
 }

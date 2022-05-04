@@ -1,12 +1,13 @@
 {
   "name": "@samhuk/number-input",
-  "version": "1.0.2",
-  "description": "Vanilla JS number input UI component",
+  "version": "1.0.3",
+  "description": "A vanilla JS number input UI component",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "files": [
     "dist/**/*",
-    "src/component/**/*"
+    "src/component/**/*",
+    "img/**/*"
   ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",

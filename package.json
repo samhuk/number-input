@@ -24,6 +24,9 @@
   "author": "",
   "license": "MIT",
   "dependencies": { },
+  "publishConfig": {
+    "access": "public"
+  },
   "devDependencies": {
     "esbuild-plugin-sass": "^1.0.1",
     "esbuild-sass-plugin": "^2.2.3",
